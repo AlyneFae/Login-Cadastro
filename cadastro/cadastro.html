@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Cadastro PAC</title>
     <link rel="stylesheet" href="/cadastro/cadastro.css">
 </head>
+
 <body>
 
     <section class="gradient">
@@ -18,6 +20,7 @@
                 <h2>Cadastre-se na PAC</h2>
 
                 <div class="content">
+
                     <label for="usuario" id="labelUsuario">Usuário:</label>
                     <input type="text" id="id_usuario" name="usuario">
                     <label for="email" id="labelEmail">E-mail:</label>
@@ -26,11 +29,14 @@
                     <input type="password" id="id_senha" name="senha">
                     <label for="confirmarSenha" id="labelConfirmarSenha">Confirmar senha:</label>
                     <input type="password" id="id_confirmarSenha" name="confirmarSenha">
+
                 </div>
             
                 <div class="visible">
+
                     <input type="checkbox" id="senhaVisivel" onclick="senhaRevelada()">
                     <label for="senhaVisivel" class="imgSenha"></label>
+
                 </div>
             
                 <button onclick="cadastro()">Cadastrar</button>
@@ -44,4 +50,5 @@
     <script src="/cadastro/cadastro.js"></script>
 
   </body>
+
 </html>
