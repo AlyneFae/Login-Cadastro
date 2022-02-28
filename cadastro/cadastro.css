@@ -6,6 +6,7 @@ body{
 
 .gradient{
 
+    text-align: center;
     display: flex;
     align-items: center;
     background: linear-gradient(45deg, #42a189,#0f4596);
