@@ -18,10 +18,6 @@ let confirmarSenha = document.querySelector('#id_confirmarSenha')
 let labelConfirmarSenha = document.querySelector('#labelConfirmarSenha')
 let validConfirmarSenha = false
 
-// divs ocultas
-let msgError = document.querySelector('#msgError')
-let msgSuccess = document.querySelector('#msgSuccess')
-
 // validar o campo de usuario
 usuario.addEventListener('keyup', () => {
 
@@ -109,11 +105,24 @@ function cadastro(){
 
   if(validUsuario && validEmail && validSenha && validConfirmarSenha){
 
+    //localstorage
+    let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
+
+    listaUser.push(
+      {
+        usuarioCad: usuario.value,
+        emailCad: email.value,
+        senhaCad: senha.value
+      }
+    ) 
+
+    localStorage.setItem('listaUser', JSON.stringify(listaUser))
+
     //modal sucesso
     Swal.fire({
 
       title: 'Sucesso!',
-      text: 'Cadastro efetuado com sucesso',
+      text: 'Seu cadastro foi efetuado com sucesso',
       icon: 'success',
 
     })
