@@ -32,7 +32,8 @@ body{
 }
 
 .visible input[type = checkbox] + label {
-    
+        
+    margin: 20px;
     background-image: url(/img/fechado.png);
     background-size: cover;
     height: 40px;
@@ -44,6 +45,7 @@ body{
 
 .visible input[type = checkbox]:checked + label{
 
+    margin: 20px;
     background-image: url(/img/aberto.png);
     background-size: cover;
     height: 40px;
@@ -67,15 +69,16 @@ body{
 }
 
 .box a{
-
-    color: #1d5ec0 ;
+    
+    font-size: 15px;
+    color: #133f9e;
     text-decoration: none;
 
 }
 
 .box a:focus{
 
-    color: white;
+    color: black;
 
 }
 
@@ -119,6 +122,7 @@ body{
 
 .box {
     
+    padding-bottom: 15px;
     width: 400px;
     height: 540px;
     color: black;

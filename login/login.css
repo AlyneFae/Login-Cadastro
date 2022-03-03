@@ -23,7 +23,8 @@ body{
 }
 
 .visible input[type = checkbox] + label {
-
+    
+    margin: 15px;
     background-image: url(/img/fechado.png);
     background-size: cover;
     height: 40px;
@@ -35,6 +36,7 @@ body{
 
 .visible input[type = checkbox]:checked + label{
 
+    margin: 15px;
     background-image: url(/img/aberto.png);
     background-size: cover;
     height: 40px;
@@ -72,6 +74,7 @@ body{
 
 .container button{
 
+    margin-top: 10px;
     border: none;
     border-radius: 8px;
     width: 70%;
