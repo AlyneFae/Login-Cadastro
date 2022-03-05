@@ -41,7 +41,7 @@ email.addEventListener('keyup', () => {
 
   }else{
 
-    validEmail = true 
+    validEmail = true
 
   }
   
@@ -142,22 +142,22 @@ function cadastro(){
 
 }
 
-// para revelar a senha  
+// para revelar a senha do cadastro
 function senhaRevelada() {
   
-    let s = document.getElementById("id_senha");
-    let sc = document.getElementById("id_confirmarSenha");
+  let s = document.getElementById("id_senha");
+  let sc = document.getElementById("id_confirmarSenha");
 
-    if (s.type === "password"){
+  if (s.type === "password"){
 
-      s.type = "text";
-      sc.type ="text";
+    s.type = "text";
+    sc.type ="text";
 
-    } else {
+  } else {
 
-      s.type = "password";
-      sc.type = "password";
+    s.type = "password";
+    sc.type = "password";
 
-    }
+  }
 
 }

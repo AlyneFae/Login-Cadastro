@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login PAC</title>
     <link rel="stylesheet" href="/login/login.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -19,9 +20,9 @@
                 <h2>Faça seu login</h2>
 
                 <div class="content">
-                    <label for="email" id="labelEmail2">E-mail:</label>
+                    <label for="email" id="emailLabel">E-mail:</label>
                     <input type="email" id="email" name="email" >
-                    <label for="senha" id="labelSenha2">Senha:</label>
+                    <label for="senha" id="senhaLabel">Senha:</label>
                     <input type="password" id="senha" name="senha" >
                 </div>
 
@@ -31,7 +32,7 @@
                 </div>
 
                 <div class="botao">
-                    <button onclick="login()" id="login">Login</button>
+                    <button onclick="entrar()">Login</button>
                 </div>
     
             </div>
