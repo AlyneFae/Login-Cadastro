@@ -47,7 +47,7 @@ email.addEventListener('keyup', () => {
   
 })
 
-//para aceitar na senha no minimo 8 caracteres na senha
+//para aceitar na senha no minimo 8 caracteres
 senha.addEventListener('keyup', () => {
   
   if(senha.value.length == 0 ){

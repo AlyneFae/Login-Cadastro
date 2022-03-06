@@ -39,7 +39,7 @@ function entrar(){
 
   if(email.value == userValid.email && senha.value == userValid.senha){
 
-    alert('Funciona!!')
+    window.location.href = '/index/home.html'
 
   }else{
 
