@@ -9,6 +9,10 @@ function entrar(){
   let senha = document.querySelector('#senha')
   let senhaLabel = document.querySelector('#senhaLabel')
 
+  //variaveis de admin
+  let adminEmail = "admin@gmail.com"
+  let adminSenha = "admin123"
+
   let listaUser = []
   
   let userValid = {
@@ -52,6 +56,28 @@ function entrar(){
     })
 
   }
+
+  if(email.value == adminEmail && senha.value == adminSenha){
+
+    alert('Admin logado')
+
+  }else{
+
+    Swal.fire({
+
+      title: 'Erro!',
+      text: 'E-mail ou senha incorretos',
+      icon: 'error',
+
+    })
+
+  }
+
+}
+
+function sair(){
+
+  window.location.href = '/login/login.html'
 
 }
 

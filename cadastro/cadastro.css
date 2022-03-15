@@ -13,7 +13,7 @@ body{
     background-size: 300% 300%;
     animation: colors 40s ease infinite;
     width: 100%;
-    height: 657px;
+    height: auto;
 
 }
 
