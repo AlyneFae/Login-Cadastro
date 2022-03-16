@@ -4,31 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/login/login.js"></script>
-    <script src="/auth.js"></script>
+    <script src="/login/login.js"></script> 
+    <script src="/auth.js"></script> 
     <title>PAC</title>
 </head>
 <body>
 
+    <!-- PARA APARECER O USUARIO -->
     <h1 id="logado"> Olá <span id="nome-usuario"></span>!</h1>
 
-    <!-- NÃO ADMIN -->
+    <!-- BOTAO DE PERFIL E CRUD -->
     <button id="botao" onClick="irParaPerfil()">Meu perfil</button> 
 
+    <!-- BOTAO PARA SAIR DA CONTA -->
     <button onclick="sair()"> Sair </button>
 
     <script>
+
+        //SCRIPT TERA QUE ESTAR NO JS DA HOME
+
+        //PARA MUDAR O USUARIO
         let elementoNome = document.querySelector('#nome-usuario')
         let usuarioLogado = JSON.parse(localStorage.getItem('auth'))
         elementoNome.innerHTML = usuarioLogado.dados.usuario
 
 
-
+        //PARA MUDAR O BOTAO DO USUARIO E CRUD = CRIAR FUNCTIONS DEPOIS PARA IR PARA SEU LUGAR
         let elementoBotao = document.querySelector('#botao')
         if (usuarioLogado.isAdmin == true) {
             elementoBotao.innerHTML = 'IR PARA CRUD'
             elementoBotao.setAttribute('onClick', 'irParaCRUD()')
         }
+
+
     </script>
 </body>
 </html>

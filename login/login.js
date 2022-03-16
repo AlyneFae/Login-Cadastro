@@ -50,7 +50,7 @@ function entrar(){
 
     localStorage.setItem('auth', JSON.stringify(dadosUsuario))
 
-    window.location.href = '/index/home.html'
+    window.location.href = '/index/home.html' //MUDAR PARA HOME HTML
 
   }else{
 
@@ -77,7 +77,7 @@ function entrar(){
 
     localStorage.setItem('auth', JSON.stringify(dadosUsuario))
 
-    window.location.href = '/codificandoRepeticao-master/Crud.html'
+    window.location.href = '/index/home.html' //MUDAR PARA HOME HTML
 
   }else{
 
@@ -97,7 +97,7 @@ function sair(){
 
   localStorage.removeItem('auth')
 
-  window.location.href = '/login/login.html'
+  window.location.href = '/login/login.html' //MUDAR PARA HTML LOGIN
 
 }
 
