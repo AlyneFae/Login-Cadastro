@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/login/login.js"></script>
+    <script src="/auth.js"></script>
     <title>PAC</title>
 </head>
 <body>
 
-    <h1 id="logado"> Estou logado !</h1>
+    <h1 id="logado"> Olá <span id="nome-usuario"></span>!</h1>
+
+    <!-- NÃO ADMIN -->
+    <button id="botao" onClick="irParaPerfil()">Meu perfil</button> 
 
     <button onclick="sair()"> Sair </button>
 
-    <script src="/login/login.js"></script>
+    <script>
+        let elementoNome = document.querySelector('#nome-usuario')
+        let usuarioLogado = JSON.parse(localStorage.getItem('auth'))
+        elementoNome.innerHTML = usuarioLogado.dados.usuario
+
+
+
+        let elementoBotao = document.querySelector('#botao')
+        if (usuarioLogado.isAdmin == true) {
+            elementoBotao.innerHTML = 'IR PARA CRUD'
+            elementoBotao.setAttribute('onClick', 'irParaCRUD()')
+        }
+    </script>
 </body>
 </html>

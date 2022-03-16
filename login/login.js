@@ -43,6 +43,13 @@ function entrar(){
 
   if(email.value == userValid.email && senha.value == userValid.senha){
 
+    let dadosUsuario = {
+      dados: userValid,
+      isAdmin: false
+    }
+
+    localStorage.setItem('auth', JSON.stringify(dadosUsuario))
+
     window.location.href = '/index/home.html'
 
   }else{
@@ -59,7 +66,18 @@ function entrar(){
 
   if(email.value == adminEmail && senha.value == adminSenha){
 
-    alert('Admin logado')
+    let dadosUsuario = {
+      dados: {
+        usuario: 'Admin',
+        email: adminEmail,
+        senha: adminSenha,
+      },
+      isAdmin: true
+    }
+
+    localStorage.setItem('auth', JSON.stringify(dadosUsuario))
+
+    window.location.href = '/codificandoRepeticao-master/Crud.html'
 
   }else{
 
@@ -76,6 +94,8 @@ function entrar(){
 }
 
 function sair(){
+
+  localStorage.removeItem('auth')
 
   window.location.href = '/login/login.html'
 
