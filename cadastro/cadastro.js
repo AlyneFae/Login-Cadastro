@@ -30,6 +30,7 @@ usuario.addEventListener('keyup', () => {
     validUsuario = true 
 
   }
+  
 })
 
 // para validar o campo de email
